@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome Page</title>
+
+  <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+  <h1>Hello!</h1>
+  <p>Please enter your name:</p>
+
+  <input type="text" id="userName">
+  <button onclick="WelcomeUser()">PRESS ME</button>
+
+  <h2 id="welcomeMessage"></h2>
+
+  <script>
+    function WelcomeUser(){
+      const name = document.getElementById('userName').value;
+      const welcomeMessage = `Welcome, ${name}!`;
+      document.getElementById('welcomeMessage').innerText = welcomeMessage
+
+    }
+  </script>
+</body>
+</html>
