@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safari Survey</title>
+  <link rel="stylesheet" href="safaristyle.css">
+
+</head>
+
+<body>
+
+  <h1>Welcome to the Safari Survey!</h1>
+
+  <form action="/submit" method="POST">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="text" id="email" name="email" required><br><br>
+
+    <label for="animal">What is your favorite Safari Animal?</label><br>
+    <select id="animal">
+      <option value="elephant">Elephant</option>
+      <option value="giraffe">Giraffe</option>
+      <option value="leopard">Leopard</option>
+    </select><br><br>
+
+    <fieldset>
+      <legend>Select a Safari Lodge:</legend>
+
+      
+      <input type="radio" name = "lodge" id="wildwaters" value = "wildwaters">
+      <label for="wildwaters">Wildwaters</label><br>
+      
+      <input type="radio" name = "lodge" id="madikwe" value="madikwe">
+      <label for="madikwe">Madikwe</label><br>
+
+      <input type="radio" name = "lodge" id="ukumbe" value="ukumbe bush">
+      <label for="ukumbe">Ukumbe Bush</label><br>
+
+
+
+    </fieldset><br>
+
+    <fieldset>
+      <legend>Select your activities</legend>
+
+      <input type="checkbox" name="activity" id="gameDrive" value = "gamedrive" required>
+      <label for="gameDrive">Game Drive</label>
+
+      <input type="checkbox" name="activity" id="hike" value = "hike">
+      <label for="hike">Hike</label>
+
+      <input type="checkbox" name="activity" id="helicopterTour" value = "helicopter tour">
+      <label for="helicopterTour">Helicopter tour</label>
+    </fieldset><br>
+
+    <label for="notes">Notes:</label><br>
+    <input type="text" id="notes" name="notes">
+    <br><br>
+
+    <input type="submit" value = "Submit">
+
+  </form>
+
+
+
+</body>
+
+</html>
