@@ -1,3 +1,4 @@
+<!--Survey to get info for a African Safari tour-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,10 +10,10 @@
 </head>
 
 <body>
-
+  
   <h1>Welcome to the Safari Survey!</h1>
 
-  <form action="/submit" method="POST">
+  <form id="surveyForm" action="/submit" method="POST">
     <label for="name">Name:</label><br>
     <input type="text" id="name" name="name" required><br><br>
 
@@ -22,15 +23,19 @@
     <label for="animal">What is your favorite Safari Animal?</label><br>
     <select id="animal">
       <option value="elephant">Elephant</option>
-      <option value="giraffe">Giraffe</option>
+      <option value="rhino">Rhino</option>
       <option value="leopard">Leopard</option>
+      <option value="lion">Lion</option>
+      <option value="buffalo">Buffalo</option>
+      <option value="giraffe">Giraffe</option>
+      <option value="cheetah">Cheetah</option>
     </select><br><br>
 
     <fieldset>
       <legend>Select a Safari Lodge:</legend>
 
       
-      <input type="radio" name = "lodge" id="wildwaters" value = "wildwaters">
+      <input type="radio" name = "lodge" id="wildwaters" value = "wildwaters" required>
       <label for="wildwaters">Wildwaters</label><br>
       
       <input type="radio" name = "lodge" id="madikwe" value="madikwe">
@@ -64,7 +69,7 @@
 
   </form>
 
-
+  <script src="safariScript.js"></script>
 
 </body>
 
