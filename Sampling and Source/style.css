@@ -1,0 +1,47 @@
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.cell {
+  border: 2px;
+  padding: 20px;
+  box-sizing: border-box;
+  flex: 1 1 45%;
+}
+
+@media (min-width: 1024px) {
+  .container {
+      flex-wrap: nowrap;
+  }
+  .cell {
+      flex-basis: 22%;
+  }
+}
+
+/* Media query for medium screens */
+@media (max-width: 1023px) and (min-width: 600px) {
+  .container {
+      flex-wrap: wrap;
+  }
+  .cell {
+      flex-basis: 45%;
+  }
+}
+
+/* Media query for small screens */
+@media (max-width: 599px) {
+  .cell {
+      flex-basis: 100%;
+  }
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex Example</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Responsive Four Entry Layout Using FlexBox</h1>
+  <h2>Resize borwser to see effect</h2>
+
+  <div class="container">
+    <div class = "cell">
+      <h3>Hyperlink</h3>
+      <a href="https://www.example.com" target = "_blank">Go to Example</a>
+    </div>
+
+    <div class = "cell">
+      <h3>Image</h3>
+      <img src="Bad_day.jpg" alt="Bulls Fighting" width = "100%">
+
+    </div>
+
+    <div class = "cell">
+      <h3>Video</h3>
+      <iframe width="100%" height="315" 
+        src="https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+    </iframe>
+    </div>
+
+    <div class = "cell" id = "location">
+      <h3>Geolocation</h3>
+      <button onclick = "getLocation()">Get Location</button>
+      <p id = "geo-output"></p>
+    </div>
+
+  </div>
+
+  <script>
+    // Error handling for geolocation
+    function getLocation() {
+        var output = document.getElementById('geo-output');
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition, showError);
+        } else {
+            output.innerHTML = "Geolocation is not supported by this browser.";
+        }
+    }
+
+    // Display the user's position
+    function showPosition(position) {
+        var output = document.getElementById('geo-output');
+        output.innerHTML = "Latitude: " + position.coords.latitude +
+            "<br>Longitude: " + position.coords.longitude;
+    }
+
+    // Error handling for geolocation errors
+    function showError(error) {
+        var output = document.getElementById('geo-output');
+        switch (error.code) {
+            case error.PERMISSION_DENIED:
+                output.innerHTML = "User denied the request for Geolocation.";
+                break;
+            case error.POSITION_UNAVAILABLE:
+                output.innerHTML = "Location information is unavailable.";
+                break;
+            case error.TIMEOUT:
+                output.innerHTML = "The request to get user location timed out.";
+                break;
+            case error.UNKNOWN_ERROR:
+                output.innerHTML = "An unknown error occurred.";
+                break;
+        }
+    }
+</script>
+
+
+</body>
+</html>
