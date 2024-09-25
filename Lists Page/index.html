@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lists</title>
+  <link rel="stylesheet" href="myStyle.css">
+  <script src = "myJS.js"></script>
+</head>
+<body>
+
+  <h1>LISTS</h1>
+
+  <div class = "myFlexboxRows">
+
+    <div class = "myFlexboxColumns">
+      <h2>List adder form</h2>
+
+      <form name = "myForm">
+        Word to list: <input type="text" name = "newWord" value = ""><br>
+        List to add: <select  id="listToAdd" required>
+          <option value="" disabled selected>Select a List</option>
+          <option value= "1">1</option>
+          <option value= "2">2</option>
+        </select><br>
+        <input type="button" value = "Add to List" onclick = "validateANDadd()">
+        
+
+      </form>
+
+    </div>
+
+    <div class = "myFlexboxColumns">
+
+      <h2>List 1</h2>
+      <table id = "myList1"></table><br><br>
+      <input type="button" value = "Clear List" onclick = "clearList1()">
+    </div>
+
+    <div class = "myFlexboxColumns">
+      <h2>List 2</h2>
+      <table id = "myList2"></table><br><br>
+      <input type="button" value = "Clear List" onclick = "clearList2()">
+
+    </div>
+
+
+
+  </div>
+  
+</body>
+</html>

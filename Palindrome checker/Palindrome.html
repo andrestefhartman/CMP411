@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lists</title>
+  <link rel="stylesheet" href="palStyle.css">
+  <script src = "PalMethods.js"></script>
+</head>
+<body>
+
+  <h1>Palindromes</h1>
+
+  <div class = "myFlexboxRows">
+
+    <div class = "myFlexboxColumns">
+      <h2>Palindrome tester</h2>
+
+      <form name = "myForm">
+        Word to check: <input type="text" name = "newWord" value = ""><br>
+        Algorithm to use: <select  id="algorithmToUse" required>
+          <option value="" disabled selected>Select a List</option>
+          <option value= "1">1</option>
+          <option value= "2">2</option>
+        </select><br>
+        <input type="button" value = "Check for palindrome" onclick = "validateANDadd()">
+        
+
+      </form>
+    </div>
+  
+
+    <div class = "myFlexboxColumns">
+
+      <h2>Algorithm 1</h2>
+      <table id = "algorithm1"></table><br><br>
+      <input type="button" value = "Clear List" onclick = "clearList1()">
+    </div>
+
+    <div class = "myFlexboxColumns">
+      <h2>Algorithm 2</h2>
+      <table id = "algorithm2"></table><br><br>
+      <input type="button" value = "Clear List" onclick = "clearList2()">
+
+    </div>
+
+
+
+  </div>
+  
+</body>
+</html>
