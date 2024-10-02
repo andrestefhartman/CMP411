@@ -1,0 +1,22 @@
+.myFlexboxRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  justify-content: space-around;
+
+  
+}
+
+.myFlexboxColumns{
+  Flex: 33%;
+  padding: 20px;
+  margin: 20px;
+
+  
+}
+
+@Media screen and (max-width: 600px){
+  .myFlexboxRow{
+    flex-direction: column;
+  }
+}

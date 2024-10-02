@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Quotes</title>
+  <link rel="stylesheet" href="randomStyle.css">
+  <script src = "randomJS.js"></script>
+</head>
+<body>
+  <div class = "top-bar">
+    <h1>Random Quote Generator</h1>
+  </div>
+
+  <div class = "main-page">
+    <div class = "quote-cell">
+      <p id = "new-quote">Loading</p>
+      <p id = "author">Loading</p>
+    </div>
+  </div>
+
+  <div class = "quote-finder">
+    <select id="quote-length" required>
+      <option value="short">short</option>
+      <option value="medium">medium</option>
+      <option value="long">long</option>
+    </select>
+    <input type="button" value = "Get Quote" onclick = "getQuote()">
+  </div>
+
+  <div class = "bottom-bar">
+    <h3>Contact us!</h3>
+  </div>
+  
+</body>
+</html>

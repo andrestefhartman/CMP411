@@ -1,4 +1,4 @@
-.myFlexboxRows {
+.myFlexboxRow {
   display: flex;
   flex-wrap: wrap;
   gap: 2px;
@@ -7,7 +7,7 @@
   
 }
 
-.myFlexboxColums{
+.myFlexboxColumns{
   Flex: 33%;
   padding: 30px;
   margin: 30px;
